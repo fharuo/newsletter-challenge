@@ -6,14 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class SubscriberDTO {
-
+@NoArgsConstructor
+@Builder
+public class SubscriberResponseDTO {
     private Integer id;
     private String username;
-    private String password;
     private String email;
     private boolean admin;
 }
