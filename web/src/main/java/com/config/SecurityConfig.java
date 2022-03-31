@@ -4,6 +4,7 @@ import com.security.JWTAuthFilter;
 import com.security.JWTService;
 import com.service.serviceImpl.SubscriberServiceImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -41,7 +42,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .anyRequest()
+                .antMatchers(HttpMethod.GET,"/api/v1/subscribers")
+                   .authenticated()
+                .antMatchers(HttpMethod.POST,"/api/v1/subscribers")
+                    .authenticated()
+                .antMatchers("/api/v1/subscribers/auth/**")
                    .permitAll()
                 .and()
                     .sessionManagement()

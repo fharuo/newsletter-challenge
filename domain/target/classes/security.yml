@@ -1,0 +1,2 @@
+security-jwt-expiration: 30
+security-jwt-signature-key: bGF0YW0tbWFzdGVyY2FyZC1kZWMtMjAyMQ==
