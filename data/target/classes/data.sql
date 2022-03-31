@@ -1,0 +1,1 @@
+insert into subscribers value (1, "fharuo", "password", "fabriciohtakaki@gmail.com", 0, 1, CURRENT_TIMESTAMP, null);

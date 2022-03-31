@@ -31,7 +31,7 @@
 
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>data</artifactId>
+            <artifactId>domain</artifactId>
         </dependency>
     </dependencies>
 

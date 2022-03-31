@@ -1,4 +1,2 @@
 server:
-  servlet:
-    contextPath: /newsletter
   port: 8081
